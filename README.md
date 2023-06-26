@@ -10,7 +10,7 @@ jquery-fileupload-rails is a library that integrates jQuery File Upload for Rail
 
 ## Installing Gem
 
-    gem "jquery-fileupload-rails"
+    gem 'jquery-fileupload-rails', github: 'emjot/jquery-fileupload-rails', branch: 'remove-sassc'
 
 ## Using the javascripts
 
@@ -56,17 +56,17 @@ You can also require the following to get the js from the Basic-Plus, AngularJS 
 
     //= require jquery-fileupload/jquery-ui
 
-## Using the stylesheet
+## Using the stylesheet (with dart sass)
 
-Require the stylesheet file to app/assets/stylesheets/application.css
+Import the gem's sass into your sass:
 
-    *= require jquery.fileupload
-    *= require jquery.fileupload-ui
+    @import jquery.fileupload
+    @import jquery.fileupload-ui
 
-There are also noscript styles for Browsers with Javascript disabled, to use them create a noscript.css and add it to your precompile-list and layout inside a noscript tag:
+There are also noscript styles for Browsers with Javascript disabled, to use them create a noscript.sass and add it to your dartsass builds config as well to your layout inside a noscript tag:
 
-    *= require jquery.fileupload-noscript
-    *= require jquery.fileupload-ui-noscript
+    @import jquery.fileupload-noscript
+    @import jquery.fileupload-ui-noscript
 
 ## Using the middleware
 
